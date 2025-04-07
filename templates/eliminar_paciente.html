@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Paciente</title>
+</head>
+<body>
+    <h1>Eliminar Paciente</h1>
+    <p>¿Estás seguro de que quieres eliminar a {{ paciente.nombre }}?</p>
+    <form method="POST">
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{{ url_for('pacientes_principal') }}">Cancelar</a>
+</body>
+</html>

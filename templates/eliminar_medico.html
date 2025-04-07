@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Médico</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Eliminar Médico</h1>
+        <p>¿Estás seguro de que deseas eliminar a {{ medico.nombre }} {{ medico.apellido }}?</p>
+        <form method="POST" action="{{ url_for('eliminar_medico', id=medico.id) }}">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{{ url_for('medicos_principal') }}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
